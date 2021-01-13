@@ -40,3 +40,57 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const anchorItems = document.querySelectorAll("a");
+anchorItemsArray = Array.from(anchorItems);
+anchorItemsArray[0].textContent = siteContent["nav"]["nav-item-1"];
+anchorItemsArray[1].textContent = siteContent["nav"]["nav-item-2"];
+anchorItemsArray[2].textContent = siteContent["nav"]["nav-item-3"];
+anchorItemsArray[3].textContent = siteContent["nav"]["nav-item-4"];
+anchorItemsArray[4].textContent = siteContent["nav"]["nav-item-5"];
+anchorItemsArray[5].textContent = siteContent["nav"]["nav-item-6"];
+
+const title = document.querySelector(".cta-text h1");
+title.textContent = siteContent["cta"]["h1"];
+
+const mainButton = document.querySelector(".cta-text button");
+mainButton.textContent = siteContent.cta.button;
+
+const mainImg = document.getElementById("cta-img");
+mainImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+const subTitlesTop = document.querySelectorAll(".top-content h4")
+subTitlesTopArray = Array.from(subTitlesTop);
+// console.log(subTitlesTopArray);
+subTitlesTopArray[0].textContent = siteContent["main-content"]["features-h4"];
+subTitlesTopArray[1].textContent = siteContent["main-content"]["about-h4"];
+
+const parTop = document.querySelectorAll(".top-content p")
+parTopArray = Array.from(parTop);
+// console.log(subTitlesTopArray);
+parTop[0].textContent = siteContent["main-content"]["features-content"];
+parTop[1].textContent = siteContent["main-content"]["about-content"];
+
+const midImg = document.getElementById("middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+const subTitlesBottom = document.querySelectorAll(".bottom-content h4")
+subTitlesBottomArray = Array.from(subTitlesBottom);
+// console.log(subTitlesTopArray);
+subTitlesBottom[0].textContent = siteContent["main-content"]["services-h4"];
+subTitlesBottom[1].textContent = siteContent["main-content"]["product-h4"];
+subTitlesBottom[2].textContent = siteContent["main-content"]["vision-h4"];
+
+const parBottom = document.querySelectorAll(".bottom-content p")
+// console.log(subTitlesTopArray);
+parBottom[0].textContent = siteContent["main-content"]["services-content"];
+parBottom[1].textContent = siteContent["main-content"]["product-content"];
+parBottom[2].textContent = siteContent["main-content"]["vision-content"];
+
+document.querySelector(".contact h4").textContent = siteContent["contact"]["contact-h4"];
+const bottomPs = document.querySelectorAll(".contact p");
+bottomPs[0].textContent = siteContent["contact"]["address"];
+bottomPs[1].textContent = siteContent["contact"]["phone"];
+bottomPs[2].textContent = siteContent["contact"]["email"];
+
+document.querySelector("footer p").textContent = siteContent["footer"]["copyright"];
