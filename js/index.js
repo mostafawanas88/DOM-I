@@ -42,6 +42,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const anchorItems = document.querySelectorAll("a");
+
 anchorItemsArray = Array.from(anchorItems);
 anchorItemsArray[0].textContent = siteContent["nav"]["nav-item-1"];
 anchorItemsArray[1].textContent = siteContent["nav"]["nav-item-2"];
@@ -49,6 +50,12 @@ anchorItemsArray[2].textContent = siteContent["nav"]["nav-item-3"];
 anchorItemsArray[3].textContent = siteContent["nav"]["nav-item-4"];
 anchorItemsArray[4].textContent = siteContent["nav"]["nav-item-5"];
 anchorItemsArray[5].textContent = siteContent["nav"]["nav-item-6"];
+
+
+anchorItemsArray.forEach(element => {
+  element.style.color = "green";
+})
+
 
 const title = document.querySelector(".cta-text h1");
 title.textContent = siteContent["cta"]["h1"];
@@ -94,3 +101,15 @@ bottomPs[1].textContent = siteContent["contact"]["phone"];
 bottomPs[2].textContent = siteContent["contact"]["email"];
 
 document.querySelector("footer p").textContent = siteContent["footer"]["copyright"];
+
+// creating two new elements and adding them to NAV
+const helpElement = document.createElement("a");
+helpElement.textContent = "Help";
+helpElement.style.color = "green";
+const NavHold = document.querySelector("nav")
+NavHold.appendChild(helpElement);
+
+const getInTouch = document.createElement("a");
+getInTouch.textContent = "Get in Touch!"
+getInTouch.style.color = "green";
+NavHold.prepend(getInTouch);
